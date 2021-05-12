@@ -1,20 +1,15 @@
-let count = 0;
+// 함수
+// 인자 타입 설정안하면 default any로 설정 , 반환값 타입도 지정할 수 있음
+function sumArray(numbers: number[]): number {
+  return numbers.reduce((acc, current) => acc + current, 0);
+}
 
-count += 1;
+const total = sumArray([1, 2, 3, 4, 5]);
+console.log(total);
 
-// String
-const message: string = "hello world";
+// 아무것도 반환하지 않을 때 :void(default)
 
-// Boolean
-const done: boolean = false;
-
-// Array
-const numbers: number[] = [1, 2, 3];
-const messages: string[] = ["hello", "world"];
-
-let mightBeUndefined: string | undefined = undefined; // 문자열 또는 undefined인 경우
-let nullableNumber: null | number = null; // null 또는 숫자인 경우
-
-let color: "red" | "orange" | "yellow" = "yellow"; // red,orange,yellow 중에서 하나만
-
-color = "orange";
+function returnNothing() {
+  console.log("blahblah");
+}
+returnNothing();
